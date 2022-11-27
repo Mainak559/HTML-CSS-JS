@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <title>Student Enrollment Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h2>Student Enrollment Form</h2>
+    </header>
+
+    <div class="wrapper-grid" style="  padding: 0px; margin: 0px; margin-top: 10px; margin-left: 10px;">
+        <div class="row">
+            <div class="col-sm">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="child">
+                            <form method="" action="" name="stud_form">
+                                <table class="left-item">
+
+                                    <tr>
+                                        <td>
+                                            <label>Name</label>
+                                        </td>
+                                        <td class="input-container">
+
+                                            <input class="form-control" type="text" name="name" id="name"
+                                                onblur="validateName(this.id)">
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label>Email</label>
+                                        </td>
+                                        <td class="input-container">
+
+                                            <input class="form-control" type="email" name="email" id="email"
+                                                onblur="validateEmail(this.id)">
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label>Website</label>
+                                        </td>
+                                        <td class="input-container">
+
+                                            <input class="form-control" type="url" name="website" id="website"
+                                                onblur="validateWebsite(this.id)">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label>Image link</label>
+                                        </td>
+                                        <td class="input-container">
+
+                                            <input class="form-control" type="url" name="imagelink" id="imagelink"
+                                                onblur="validateImagelink(this.id)">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label>Gender</label>
+                                        </td>
+                                        <td>
+
+                                            <ul>
+
+
+                                                <li>
+                                                    <label class="container">
+                                                        <label style="margin-left: 30px;">Male</label>
+
+                                                        <input type="radio" id="gender" name="gender" value="Male">
+                                                        <span class="checkmark"></span>
+
+                                                    </label>
+
+
+                                                </li>
+                                                <li>
+                                                    <label class="container" onblur="validateGender()">
+                                                        <label style="margin-left: 30px;">Female</label>
+                                                        <input type="radio" id="gender" name="gender" value="Female">
+                                                        <span class="checkmark"></span>
+
+
+
+                                                    </label>
+
+                                                </li>
+
+
+                                            </ul>
+
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label>Skills</label>
+                                        </td>
+                                        <td>
+
+                                            <label class="checkbox-container" onblur="validateSkill()">
+                                                <label style="margin-left: 20px;">Java</label>
+                                                <input type="checkbox" id="java" name="skills" value="Java">
+
+                                                <span class="checkmark-box"></span>
+                                            </label>
+
+                                            </label>
+
+                                            <label class="checkbox-container">
+                                                <label style="margin-left: 20px;">HTML</label>
+                                                <input type="checkbox" id="html" name="skills" value="HTML">
+
+                                                <span class="checkmark-box"></span>
+                                            </label>
+
+                                            <label class="checkbox-container">
+                                                <label style="margin-left: 20px;">CSS</label>
+                                                <input type="checkbox" id="css" name="skills" value="CSS">
+
+                                                <span class="checkmark-box"></span>
+
+                                            </label>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="spacing" colspan="2" style="position: relative;  margin-top: -20px;">
+
+                                            <input type="button" name="Enroll Student" id="btn" value="Enroll Student"
+                                                onclick="displayDetails()" class="enroll-Student">
+
+
+                                            <input type="reset" name="Clear" class="Clear" value="Clear">
+                                        </td>
+
+
+                                    </tr>
+
+                                </table>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-" style="padding: 0px;">
+
+                <div class="line" style="  position: relative;">
+                    <div class="vl"></div>
+                </div>
+            </div>
+
+            <div class="col-sm" style="padding: 0px;">
+                <div class="child2">
+                    <h3>Enrolled Student</h3>
+
+                    <table class="right-side-table" id="show">
+
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th style="text-align:left; ">Image</th>
+                            </tr>
+                        </thead>
+
+
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <h5>Copyright 2020-2021 by Mainak Halder</h2>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
